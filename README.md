@@ -1,6 +1,26 @@
-## Getting Started
+## Introduction
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Hello World, this is a repo for an assignment of the course TTTK1413 Algorithm Design & Problem Solving offered by National University of Malaysia (UKM). This assginment is a goal free assignment in which we are allowed to construct any application with GUI which fulfills the following case study.
+
+### Staff in the Office
+- There are various staff position in an organization.
+- These staff have their own offices based on their position.
+- Higher ranking position will get a spacious office.
+- Some low-ranking position might share one office
+
+### Tasks
+- Determine classes, its attribute and methods.
+- Determine inheritance classes
+- Determine polymorphism 
+- Provide UML class diagram
+- Implement all classes
+- Provide OfficeApp
+- Design and implement suitable GUI for the App.
+
+
+## Our goal
+With the above conditions in mind, we plan to make a mini game, where the player has to assign employees of a company into dedicated office space in the shortest amount of time possible.
+Enjoy! 
 
 ## Folder Structure
 
@@ -9,10 +29,3 @@ The workspace contains two folders by default, where:
 - `src`: the folder to maintain sources
 - `lib`: the folder to maintain dependencies
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
