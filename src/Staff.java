@@ -1,47 +1,28 @@
-import java.util.Map;
-
-public class Staff {
-  enum Ranking {
-    LOW,
-    MEDIUM,
-    HIGH
-  }
-
-  // Map for known position and ranking combination
-  private static Map<String, Ranking> positionRankMap = Map.of(
-      "Manager", Ranking.HIGH,
-      "Staff", Ranking.LOW);
+public abstract class Staff {
 
   private String name;
   private String position;
-  private Ranking ranking;
-  private boolean hasOffice;
+  private String officeId;
 
   /**
    * @param name
    * @param position
-   * @param ranking
    */
-  public Staff(String name, String position, Staff.Ranking ranking) {
+  public Staff(String name, String position) {
     this.name = name;
     this.position = position;
-    this.ranking = ranking;
+    this.officeId = "";
   }
 
   /**
    * @param name
    * @param position
-   * @throws Exception
+   * @param officeId
    */
-  public Staff(String name, String position) throws Exception {
+  public Staff(String name, String position, String officeId) {
     this.name = name;
     this.position = position;
-
-    if (!positionRankMap.containsKey(position)) {
-      throw new Exception("No relevant ranking found for the position. Please use Staff Constructor with ranking");
-    }
-
-    this.ranking = positionRankMap.get(position);
+    this.officeId = officeId;
   }
 
   /**
@@ -59,17 +40,25 @@ public class Staff {
   }
 
   /**
-   * @return the ranking
+   * @return the officeId
    */
-  public Ranking getRanking() {
-    return ranking;
+  public String getOffice() {
+    if (officeId.equals("")) {
+      return "No Office";
+    }
+
+    return officeId;
   }
 
-  /**
-   * @return the hasOffice
+  /*
+   * (non-Javadoc)
+   * 
+   * @see java.lang.Object#toString()
    */
-  public boolean hasOffice() {
-    return hasOffice;
+
+  @Override
+  public String toString() {
+    return String.format("%s %s %s", this.getName(), this.getPosition(), this.getOffice());
   }
 
 }
