@@ -2,7 +2,7 @@ public abstract class Staff {
 
   private String name;
   private String position;
-  private String officeId;
+  private Office office;
 
   /**
    * @param name
@@ -11,7 +11,6 @@ public abstract class Staff {
   public Staff(String name, String position) {
     this.name = name;
     this.position = position;
-    this.officeId = "";
   }
 
   /**
@@ -19,10 +18,10 @@ public abstract class Staff {
    * @param position
    * @param officeId
    */
-  public Staff(String name, String position, String officeId) {
+  public Staff(String name, String position, Office office) {
     this.name = name;
     this.position = position;
-    this.officeId = officeId;
+    this.setOffice(office);
   }
 
   /**
@@ -42,12 +41,17 @@ public abstract class Staff {
   /**
    * @return the officeId
    */
-  public String getOffice() {
-    if (officeId.equals("")) {
-      return "No Office";
-    }
+  public Office getOffice() {
+    return office;
+  }
 
-    return officeId;
+  /**
+   * @param office the office to set
+   */
+  public void setOffice(Office office) {
+    if (office.addOccupant(this)) {
+      this.office = office;
+    }
   }
 
   /*
