@@ -11,10 +11,10 @@ public class HighRankingStaff extends Staff {
   /**
    * @param name
    * @param position
-   * @param officeId
+   * @param office
    */
-  public HighRankingStaff(String name, String position, String officeId) {
-    super(name, position, officeId);
+  public HighRankingStaff(String name, String position, Office office) {
+    super(name, position, office);
   }
 
   /*
