@@ -1,5 +1,12 @@
 import java.util.Scanner;
 
+
+import Office.BigOffice;
+import Office.MediumOffice;
+import Office.SmallOffice;
+import Staff.HighRankingStaff;
+import Staff.LowRankingStaff;
+
 public class OfficeApp {
   public static void main(String[] args) {
     int choiceOfMode = OfficeApp.modeSelectionPrompt();
@@ -22,6 +29,9 @@ public class OfficeApp {
   }
 
   private static void guiMode() {
+    MainFrame frame = new MainFrame();
+    frame.setSize(500, 500);
+    frame.setVisible(true);
   }
 
   private static void consoleMode() {

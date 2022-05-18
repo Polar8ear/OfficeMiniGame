@@ -1,3 +1,7 @@
+package Staff;
+
+import Office.Office;
+
 public abstract class Staff {
 
   private String name;

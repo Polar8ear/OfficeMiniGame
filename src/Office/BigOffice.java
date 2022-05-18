@@ -1,5 +1,11 @@
-public class MediumOffice extends Office {
-  static int MAX_SIZE = 2;
+package Office;
+
+import Staff.HighRankingStaff;
+import Staff.LowRankingStaff;
+import Staff.Staff;
+
+public class BigOffice extends Office {
+  static int MAX_SIZE = 4;
 
   @Override
   boolean checkValidOccupant(Staff staff) {
@@ -11,7 +17,7 @@ public class MediumOffice extends Office {
       return false;
     }
 
-    if (staff instanceof LowRankingStaff && this.occupants.size() < MediumOffice.MAX_SIZE) {
+    if (staff instanceof LowRankingStaff && this.occupants.size() < BigOffice.MAX_SIZE) {
       return true;
     }
 

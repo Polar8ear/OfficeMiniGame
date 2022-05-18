@@ -1,3 +1,7 @@
+package Staff;
+
+import Office.Office;
+
 public class LowRankingStaff extends Staff {
 
   /**
