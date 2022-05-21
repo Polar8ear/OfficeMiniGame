@@ -1,6 +1,6 @@
-package Staff;
+package staff;
 
-import Office.Office;
+import office.Office;
 
 public class HighRankingStaff extends Staff {
 

@@ -1,8 +1,8 @@
-package Office;
+package office;
 
-import Staff.HighRankingStaff;
-import Staff.LowRankingStaff;
-import Staff.Staff;
+import staff.HighRankingStaff;
+import staff.LowRankingStaff;
+import staff.Staff;
 
 public class MediumOffice extends Office {
   static int MAX_SIZE = 2;

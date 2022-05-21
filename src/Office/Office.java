@@ -1,8 +1,8 @@
-package Office;
+package office;
 
 import java.util.ArrayList;
 
-import Staff.Staff;
+import staff.Staff;
 
 public abstract class Office {
   static int MAX_SIZE = 1;

@@ -1,11 +1,11 @@
 import java.util.Scanner;
 
-
-import Office.BigOffice;
-import Office.MediumOffice;
-import Office.SmallOffice;
-import Staff.HighRankingStaff;
-import Staff.LowRankingStaff;
+import gui.View;
+import office.BigOffice;
+import office.MediumOffice;
+import office.SmallOffice;
+import staff.HighRankingStaff;
+import staff.LowRankingStaff;
 
 public class OfficeApp {
   public static void main(String[] args) {
@@ -29,7 +29,7 @@ public class OfficeApp {
   }
 
   private static void guiMode() {
-    MainFrame frame = new MainFrame();
+    View frame = new View();
     frame.setSize(500, 500);
     frame.setVisible(true);
   }

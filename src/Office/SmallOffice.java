@@ -1,7 +1,7 @@
-package Office;
+package office;
 
-import Staff.LowRankingStaff;
-import Staff.Staff;
+import staff.LowRankingStaff;
+import staff.Staff;
 
 public class SmallOffice extends Office {
   static int MAX_SIZE = 1;
