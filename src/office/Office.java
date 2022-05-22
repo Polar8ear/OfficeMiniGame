@@ -16,7 +16,13 @@ public abstract class Office {
   }
 
   public void displayOccupants() {
-    System.out.println(String.format("This %s has the following occupant(s)", super.toString()));
+
+    if(occupants.isEmpty()){
+      System.out.println(String.format("This %s currently does not have any occupant.", getClass().getSimpleName()));
+      return;
+    }
+
+    System.out.println(String.format("This %s has the following occupant(s):", getClass().getSimpleName()));
     for (Staff occupant : occupants) {
       System.out.println(String.format("- %s", occupant));
     }
