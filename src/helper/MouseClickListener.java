@@ -76,7 +76,9 @@ public class MouseClickListener implements MouseListener{
             }
             
             officeSpace.addOccupant(selectedStaff);
-            officeSpace.getOffice().displayOccupants();
+            selectedStaffCardPane.setSelected(false);
+            this.selectedStaffCardPane = null;
+            this.selectedStaff = null;
             OfficeMapPane.revalidate();
             OfficeMapPane.repaint();
         }
