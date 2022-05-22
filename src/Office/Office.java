@@ -25,11 +25,22 @@ public abstract class Office {
   abstract boolean checkValidOccupant(Staff staff);
 
   public boolean addOccupant(Staff staff) {
-    if (checkValidOccupant(staff)) {
+    if (checkValidOccupant(staff) && !occupants.contains(staff)) {
       this.occupants.add(staff);
+      staff.setOffice(this);
       return true;
     }
 
     return false;
   }
+  
+  public boolean removeOccupant(Staff staff) {
+    return occupants.remove(staff);
+  }
+
+  @Override
+  public String toString() {
+      return String.format("%s", this.getClass().getSimpleName());
+  }
+  
 }
