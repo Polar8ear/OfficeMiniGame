@@ -49,6 +49,10 @@ public abstract class Staff{
     return office;
   }
 
+  public boolean hasOffice() {
+    return office != null;
+  }
+
   /**
    * @param office the office to set
    */
@@ -70,7 +74,7 @@ public abstract class Staff{
 
   @Override
   public String toString() {
-    return String.format("%s %s %s", this.getName(), this.getPosition(), this.getOffice());
+    return String.format("%s %s %s", this.getName(), this.getPosition(), office==null?"":office);
   }
 
 }
