@@ -82,10 +82,6 @@ public class View extends JFrame implements ActionListener {
         resultPane.add(Box.createHorizontalStrut(5));
 
         mainPane.add(resultPane, BorderLayout.SOUTH);
-
-        JOptionPane.showMessageDialog(this,STARTING_MESSAGE);
-        startTimer();
-
     }
 
     @Override
@@ -114,7 +110,9 @@ public class View extends JFrame implements ActionListener {
    
     }
 
-    private void startTimer(){
+    public void startTimer(){
+        JOptionPane.showMessageDialog(this,STARTING_MESSAGE);
+
         startingDate = new Date();
         ActionListener timeListener = new ActionListener(){
 

@@ -36,6 +36,7 @@ public class OfficeApp {
     view.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     view.pack();
     view.setVisible(true);
+    view.startTimer();
   }
 
   private static void consoleMode() {
