@@ -36,7 +36,7 @@ public class StaffCardPane extends JPanel{
         add(Box.createVerticalGlue());
         
         try {
-            String imagePath = "src/images/" + (this.staff instanceof LowRankingStaff ? "LowRankingStaff.png" : "HighRankingStaff.png");
+            String imagePath = "resources/" + (this.staff instanceof LowRankingStaff ? "LowRankingStaff.png" : "HighRankingStaff.png");
             BufferedImage originalImage;
             originalImage = ImageIO.read(new File(imagePath));
             Image resizedImage = originalImage.getScaledInstance(64, 64, Image.SCALE_DEFAULT);
