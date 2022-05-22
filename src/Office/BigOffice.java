@@ -5,7 +5,7 @@ import staff.LowRankingStaff;
 import staff.Staff;
 
 public class BigOffice extends Office {
-  static int MAX_SIZE = 4;
+  int MAX_SIZE = 4;
 
   @Override
   boolean checkValidOccupant(Staff staff) {
@@ -17,7 +17,7 @@ public class BigOffice extends Office {
       return false;
     }
 
-    if (staff instanceof LowRankingStaff && this.occupants.size() < BigOffice.MAX_SIZE) {
+    if (staff instanceof LowRankingStaff && this.occupants.size() < this.MAX_SIZE) {
       return true;
     }
 
