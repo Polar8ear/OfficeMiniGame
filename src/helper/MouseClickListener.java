@@ -75,7 +75,9 @@ public class MouseClickListener implements MouseListener{
                 return;
             }
             
-            officeSpace.addOccupant(selectedStaff);
+            if(!officeSpace.addOccupant(selectedStaff)){
+                showNotifiaction("This is an invalid operation.");
+            }
             selectedStaffCardPane.setSelected(false);
             this.selectedStaffCardPane = null;
             this.selectedStaff = null;
