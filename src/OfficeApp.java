@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+import javax.swing.JFrame;
+
 import gui.View;
 import office.BigOffice;
 import office.MediumOffice;
@@ -29,9 +31,10 @@ public class OfficeApp {
   }
 
   private static void guiMode() {
-    View frame = new View();
-    frame.setSize(500, 500);
-    frame.setVisible(true);
+    View view = new View();
+    view.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    view.pack();
+    view.setVisible(true);
   }
 
   private static void consoleMode() {
@@ -39,11 +42,11 @@ public class OfficeApp {
     MediumOffice mediumOffice = new MediumOffice();
     BigOffice bigOffice = new BigOffice();
 
-    LowRankingStaff low1 = new LowRankingStaff("John", "Developer", smallOffice);
+    new LowRankingStaff("John", "Developer", smallOffice);
     LowRankingStaff low2 = new LowRankingStaff("Peter", "Designer");
     LowRankingStaff low3 = new LowRankingStaff("Dickson", "System Analyst");
 
-    HighRankingStaff high1 = new HighRankingStaff("Davidson", "Project Manager", mediumOffice);
+    new HighRankingStaff("Davidson", "Project Manager", mediumOffice);
     HighRankingStaff high2 = new HighRankingStaff("Davidson", "Tech Lead");
 
     smallOffice.displayOccupants();
