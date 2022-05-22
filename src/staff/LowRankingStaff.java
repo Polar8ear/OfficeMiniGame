@@ -1,7 +1,5 @@
 package staff;
 
-import office.Office;
-
 public class LowRankingStaff extends Staff {
 
   /**
