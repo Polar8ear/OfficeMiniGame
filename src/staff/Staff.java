@@ -18,17 +18,6 @@ public abstract class Staff{
   }
 
   /**
-   * @param name
-   * @param position
-   * @param officeId
-   */
-  public Staff(String name, String position, Office office) {
-    this.name = name;
-    this.position = position;
-    this.setOffice(office);
-  }
-
-  /**
    * @return the name
    */
   public String getName() {
