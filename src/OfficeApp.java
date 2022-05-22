@@ -20,6 +20,7 @@ public class OfficeApp {
 
       default:
       case 1:
+        System.out.println("Minimise your ide or terminal and you should see the message pane :D");
         OfficeApp.guiMode();
         break;
 
@@ -38,37 +39,56 @@ public class OfficeApp {
   }
 
   private static void consoleMode() {
+    
+    LowRankingStaff low1 = new LowRankingStaff("John", "Developer");
+    LowRankingStaff low2 = new LowRankingStaff("Peter", "Designer");
+    LowRankingStaff low3 = new LowRankingStaff("Dickson", "System Analyst");
+    
+    HighRankingStaff high1 = new HighRankingStaff("Davidson", "Project Manager");
+    HighRankingStaff high2 = new HighRankingStaff("Davidson", "Tech Lead");
+    
+    
+    System.out.println("Initialising three type of offices");
     SmallOffice smallOffice = new SmallOffice();
     MediumOffice mediumOffice = new MediumOffice();
     BigOffice bigOffice = new BigOffice();
-
-    new LowRankingStaff("John", "Developer", smallOffice);
-    LowRankingStaff low2 = new LowRankingStaff("Peter", "Designer");
-    LowRankingStaff low3 = new LowRankingStaff("Dickson", "System Analyst");
-
-    new HighRankingStaff("Davidson", "Project Manager", mediumOffice);
-    HighRankingStaff high2 = new HighRankingStaff("Davidson", "Tech Lead");
-
+    
     smallOffice.displayOccupants();
     mediumOffice.displayOccupants();
     bigOffice.displayOccupants();
-    System.out.println("");
-
-    smallOffice.addOccupant(low2);
-    mediumOffice.addOccupant(low3);
-
-    smallOffice.displayOccupants();
-    mediumOffice.displayOccupants();
-    bigOffice.displayOccupants();
-    System.out.println("");
-
-    bigOffice.addOccupant(low2);
-    bigOffice.addOccupant(low3);
+    System.out.println();
+    
+    
+    System.out.println("Adding two high ranking staff to Big Office, should have only one to show up");
+    bigOffice.addOccupant(high1);
     bigOffice.addOccupant(high2);
 
-    smallOffice.displayOccupants();
-    mediumOffice.displayOccupants();
     bigOffice.displayOccupants();
+    System.out.println();
+    
+    System.out.println("Adding three low ranking staff to Medium Office, should have only two to show up");
+    mediumOffice.addOccupant(low1);
+    mediumOffice.addOccupant(low2);
+    mediumOffice.addOccupant(low3);
+
+    mediumOffice.displayOccupants();
+    System.out.println();
+
+    System.out.println("Adding High Ranking Staff to small office should be invalid");
+    smallOffice.addOccupant(high2);
+
+    smallOffice.displayOccupants();
+    System.out.println();
+
+    System.out.println("Adding Low Ranking Staff to small office repeatedly should still have only one staff shown");
+    smallOffice.addOccupant(low3);
+    smallOffice.addOccupant(low3);
+    smallOffice.addOccupant(low3);
+
+    smallOffice.displayOccupants();
+    System.out.println();
+
+
   }
 
   private static int modeSelectionPrompt() {
