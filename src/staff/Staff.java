@@ -63,7 +63,7 @@ public abstract class Staff{
 
   @Override
   public String toString() {
-    return String.format("%s %s %s", this.getName(), this.getPosition(), office==null?"":office);
+    return String.format("%s %s %s", this.getName(), this.getPosition(), hasOffice()?"":office);
   }
 
 }
