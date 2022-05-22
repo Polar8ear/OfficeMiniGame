@@ -29,7 +29,7 @@ public class HighRankingStaff extends Staff {
 
   @Override
   public String toString() {
-    return String.format("Senior: %s %s %s", this.getName(), this.getPosition(), this.getOffice());
+    return String.format("Senior: %s", super.toString());
   }
 
 }
