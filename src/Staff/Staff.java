@@ -2,7 +2,7 @@ package staff;
 
 import office.Office;
 
-public abstract class Staff {
+public abstract class Staff{
 
   private String name;
   private String position;
@@ -53,9 +53,13 @@ public abstract class Staff {
    * @param office the office to set
    */
   public void setOffice(Office office) {
-    if (office.addOccupant(this)) {
-      this.office = office;
+    if(this.office != null){
+      this.office.removeOccupant(this);
+      return;
     }
+
+    this.office = office;
+    
   }
 
   /*
