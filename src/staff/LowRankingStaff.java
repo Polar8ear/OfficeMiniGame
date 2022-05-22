@@ -12,15 +12,6 @@ public class LowRankingStaff extends Staff {
     super(name, position);
   }
 
-  /**
-   * @param name
-   * @param position
-   * @param office
-   */
-  public LowRankingStaff(String name, String position, Office office) {
-    super(name, position, office);
-  }
-
   /*
    * (non-Javadoc)
    * 
